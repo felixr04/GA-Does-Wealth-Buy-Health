@@ -74,7 +74,7 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted on Google Classroom**
+**Materials must be submitted on Google Classroom by 9:00 a.m. Pacific on February 24, 2025.**
 
 Your technical report will be hosted on GitHub Enterprise. Make sure it includes:
 
@@ -90,7 +90,7 @@ Your technical report will be hosted on GitHub Enterprise. Make sure it includes
 
 ### Presentation Structure
 
-**You must be ready to present your findings by the start of class on DATE.**
+**You must be ready to present your findings by 9:00 a.m. Pacific on February 24, 2025.**
 
 - **Must be within time limit - not more than 7 minutes.**
 - Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
