@@ -1,71 +1,58 @@
 # Investing In Health
 
-In this section, it is recommended to provide some background information about your topic and a clear problem statement. This can be done in 1-2 paragraphs. To conclude this 
-section, you can state the goal or objective of your project, for example, "The objective of this project is to _____."
+Life expectancy is often used as a key indicator of a nation’s overall well-being, yet significant disparities exist across countries and income groups. While it is widely known that wealthier nations tend to have higher life expectancies, the role of government health spending in mitigating inequalities in longevity is less clear. We will try to uncover this relationship because it is crucial for shaping national policy, especially in countries with high income inequality
 
-Examples:
+Economic inequality, which for our puposes we will be using the Gini coefficient, has been linked to deaths and health, but whether increased public health investment can counteract this effect is still unclear. In countries where inequality is high, we can predict that low income individuals have less access to health clinics and foods rich in nutrition.
 
-> * Changes in legislation and format have caused SAT participation rates to vary across different states in the US. The objective of this project is to explore trends in SAT 
-and ACT participation between 2017-2019, and identify states with declining SAT participation rates that may require further attention or resources by the end of the calendar 
-year.
-> * High school students often have limited guidance when it comes to setting an SAT or ACT score goal while applying to colleges. This project seeks to identify the schools 
-with the highest and lowest SAT/ACT score requirements and investigate whether there is a correlation between the schools' prestige and their test score expectations by the 
-end of the academic year.
-> * Some school districts in California are struggling with low student performance on the SAT and ACT tests. The aim of this project is to identify the districts with the 
-lowest overall student performance on the tests by the end of the academic year, so that the state can allocate resources and recommend programs to these districts in need.
-> * There is a lack of clarity on whether a correlation exists between student academic performance and their SAT/ACT scores. This project aims to investigate the 
-relationship between student GPA and SAT/ACT scores, and provide evidence to support or oppose the continuation of these tests as a requirement for college applications by 
-the end of the research period.
-> * *Feel free to be creative with your own problem statement!*
-
-A great problem statement should be SMART:
-   - **S**pecific - The problem statement should clearly define the problem or challenge being addressed, including any relevant context or background information.
-   - **M**easurable - The problem statement should identify measurable indicators or criteria that can be used to determine whether the problem has been solved or addressed.
-   - **A**chievable - The problem statement should identify goals or objectives that are realistic and attainable given the resources and constraints of the project.
-   - **R**elevant - The problem statement should be relevant to the broader context or field of study, and should address a problem or challenge that is important and 
-meaningful.
-   - **T**ime-bound - The problem statement should identify a clear timeframe or deadline for when the problem needs to be addressed or solved.
-
-By using the SMART framework, you can help ensure that your problem statement is well-defined and focused, and that the goals of the project are clear and achievable.
+This project aims to analyze if government health spending influences life expectancy in countries with varying levels of income inequality. Using publicly available datasets from Gapminder, this study will explore trends over time, assess correlations between public health expenditure and life expectancy, and evaluate whether higher spending helps close the longevity gap between high- and low-income populations. The findings could provide insights into the effectiveness of policy implentations of the United Nations and help in reducing health disparities and improving overall quality of life.
 
 
 # Data Dictionary
 
-A data dictionary provides a quick overview of features/variables/columns, alongside data types and descriptions. The more descriptive you can be, the more useful this 
-document is. This can also be where you describe additional data sources that have been used.
+The date that we are using for this project is from gapminder.org. Gapminder is a non-profit organization that wants to change the way people think about the world by using data driven insights. Their resources are used by many people to help them understand the world through data.
 
-Example:
+*https://www.gapminder.org/*
+
+Below you will find the data dictionary for the merged and cleaned dataset, merged_health_data.
+
+
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
-|**county_pop**|*integer*|2010 census|The population of the county (units in thousands, where 2.5 represents 2500 people).|
-|**per_poverty**|*float*|2010 census|The percent of the county over the age of 18 living below the 200% of official US poverty rate (units percent to two decimal places 98.10 
-means 98.1%)|
+|country|object|merged_health_data|Name of the nation|
+|year|int|merged_health_data|Year of observation|
+|life_expectancy|float|merged_health_data|Life expectancyof a newborn if the current mortality rates at different ages were to stay the same throughout its lifetime. (In years)|
+|gni_per_capita|float|merged_health_data|Total value of a country's income, both foriegn and domestic in US dollars.|
+|gini_coefficient|float|merged_health_data|Measure of income inequality. Ranges from 0-100 with 100 being most ineaquality and 0 being least.|
+|percent_gov_health_spending|float|merged_health_data|Government health spending as a percent of total government spending|
 
 
 # Executive Summary
+  
 
-An executive summary is a brief summary of the key points and objectives of a project. The purpose of an executive summary is to provide a high-level overview of the project 
-and to give readers a clear understanding of what the project is about and what it aims to achieve.
+## Project Overview  
+This project explores the relationship between government health spending, income inequality, and life expectancy. The goal is to determine whether increased public health investment mitigates the negative effects of inequality on longevity.  
 
-An effective executive summary should provide a clear and concise summary of the project, including its goals, methodology, key findings, and conclusions. It should be 
-written in a way that is easy to understand for a broad audience, including those who may not have technical expertise in the project's subject matter.
+## Problem Statement  
+Income inequality is widely believed to impact health outcomes, particularly life expectancy. However, the extent to which government health spending counteracts these effects remains unclear. By analyzing global data, this project aims to uncover patterns and provide insights into the role of government health investment.  
 
-Some key elements that may be included in an executive summary are:
+## Methodology  
+- **Data Sources:** Four datasets spanning from 1800 to 2100, containing statistics on life expectancy, Gini coefficient (income inequality), government health spending, and Gross National Income (GNI) per capita. The Data is provided to us via Gapminder.  
+- **Data Cleaning:** Standardized country names, handled missing values, converted financial figures, and filtered for relevant years (1990–2010).  
+- **Exploratory Data Analysis (EDA):** Used correlation analysis, scatter plots, and regression models to explore relationships between key variables.  
+- **Statistical Analysis:** Calculated correlation coefficients and p-values to assess statistical significance.  
 
-* A summary of the problem or challenge the project is addressing
-* An explanation of the project's goals and objectives
-* A summary of the project methodology, including any data sources, data cleaning, EDA & analysis techniques, or models used
-* A summary of the key findings or insights generated by the project. Feel free to include images of your visualizations here!
-* A conclusion that summarizes the main results and their implications. You may want to consider the following question as you craft your conclusion: "How can the audience 
-use the insights generated by this project to inform their decisions or actions?"
-* Next steps - This can include recommendations for future research or analysis, ideas for how to improve upon the project's methodology or data sources, and/or suggestions 
-for how to extend or expand the project in new directions.
+## Key Findings  
+1. **Income inequality negatively correlates with life expectancy (-0.41).** Countries with greater income disparity tend to have lower average lifespans.  
+2. **Government health spending positively correlates with life expectancy (0.65).** Nations that allocate more public funds to healthcare generally have longer life expectancies.  
+3. **No significant relationship between inequality and health spending.** This suggests that simply increasing health budgets may not directly address the effects of inequality.  
+4. **Visualizations highlight trends and key countries** A bubble chart of global data (filtered for clarity) shows key countries with different spending levels and life expectancies. Regresional visualizations help showcase relationships and trends between variables.  
 
-By including an executive summary in your project's readme file, you can help ensure that readers have a clear understanding of the project's purpose, methodology, and 
-findings, even if they don't have time to read the entire document.
+## Conclusion & Implications  
+While greater government health spending is linked to longer life expectancy, it does not appear to directly reduce the impact of income inequality on health outcomes. Policymakers should consider complementary strategies, such as improving healthcare accessibility, preventive care, and nutritional care to address the health consequences of inequality.  
 
-Have any questions? Let us know!
+## Next Steps  
+- **Deeper Causal Analysis:** Use advanced modeling to better understand if our correlations are causal.  
+- **Additional Health Indicators:** Incorporate metrics such as infant mortality, disease burden, or access to healthcare to provide a more comprehensive view of public health outcomes.  
+- **Policy Simulations:** Estimate the impact of potential interventions, such as universal healthcare expansion or income redistribution policies.  
 
-**Important note: In order for your readme to display as the default readme file in github, it will need to be named `README.md`. This means that before submitting your 
-project, you should either delete or replace the original `README.md` with your own version!** 
